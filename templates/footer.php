@@ -1,15 +1,15 @@
-    <? $classes = W::do_filter('style_containers', array()); ?>
+    <? $classes = W::filter('style_containers', array()); ?>
     <? foreach($classes as $c): ?>
       <? if(!$c) continue; ?>
       </div>
     <? endforeach; ?>
   <br style="clear:both"/>
-  <? W::do_action('after_content') ?>
+  <? W::action('after_content') ?>
 </div>
 <div class="footer">
-  <? W::do_action('before_footer') ?>
+  <? W::action('before_footer') ?>
   <?
-  $links = W::do_filter('footer_links', array());
+  $links = W::filter('footer_links', array());
   ?>
   <? if(count($links)>0): ?>
     <ul>
@@ -27,7 +27,7 @@
     </ul>
   <? endif; ?>
   <br clear="both"/>
-  <? W::do_action('after_footer') ?>
+  <? W::action('after_footer') ?>
 </div>
 <script type="text/javascript">
   $(function () {
