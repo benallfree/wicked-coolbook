@@ -18,7 +18,7 @@
           <? if(isset($link['href'])): ?>
             <a href="<?=$link['href']?>" class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>" >
           <? endif; ?>
-          <?=h($link['title'])?>
+          <?=W::h($link['title'])?>
           <? if(isset($link['href'])): ?>
             </a>
           <? endif; ?>

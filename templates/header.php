@@ -32,7 +32,7 @@
     <? if(count($links)>0): ?>
       <ul>
         <? foreach($links as $link): ?>
-          <li class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>"><a href="<?=$link['href']?>" class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>" ><?=h($link['title'])?></a></li>
+          <li class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>"><a href="<?=$link['href']?>" class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>" ><?=W::h($link['title'])?></a></li>
         <? endforeach; ?>
       </ul>
     <? endif; ?>
@@ -45,7 +45,7 @@
     <div class="submenu authenticated">
       <ul>
         <? foreach($links as $link): ?>
-          <li class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>"><a href="<?=$link['href']?>" class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>" ><?=h($link['title'])?></a></li>
+          <li class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>"><a href="<?=$link['href']?>" class="<?= isset($link['class']) ? $link['class'] : '' ?>" style="<?= isset($link['style']) ? $link['style'] : '' ?>" ><?=W::h($link['title'])?></a></li>
         <? endforeach; ?>
       </ul>
     </div>
@@ -59,7 +59,7 @@
     <div class='flash'>
       <ul>
         <? foreach($flashes as $msg): ?>
-          <?=h($msg)?><br/>
+          <?=W::h($msg)?><br/>
         <? endforeach ?>
       </ul>
     </div>
@@ -70,7 +70,7 @@
     <div class='error'>
       <ul>
         <? foreach(get_error() as $msg): ?>
-          <?=h($msg)?><br/>
+          <?=W::h($msg)?><br/>
         <? endforeach ?>
       </ul>
     </div>
